@@ -3,8 +3,8 @@
 ## Instalación y Ejecución
 1. Clonar el repositorio:
    ```sh
-   git clone <repo-url>
-   cd <repo-name>
+   git clone https://github.com/pedrokeilerbatistarojo/docfav-test
+   cd https://github.com/pedrokeilerbatistarojo/docfav-test
    ```
 2. Construir y levantar los contenedores con Docker:
    ```sh
