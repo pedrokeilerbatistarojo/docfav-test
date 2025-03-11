@@ -9,7 +9,7 @@ class RegisterUserTest extends BaseTest {
     public function testUserRegistration()
     {
         $url = 'http://localhost:10005/register';
-        $data = ['name' => 'John Doe', 'email' => 'john@example.com', 'password' => '123456'];
+        $data = ['name' => 'John Doe', 'email' => 'john@example.com', 'password' => 'SecurePass123!'];
 
         $options = [
             'http' => [

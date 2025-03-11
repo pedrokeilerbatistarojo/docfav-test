@@ -8,14 +8,14 @@ use App\User\Domain\ValueObjects\UserId;
 use App\User\Domain\ValueObjects\UserName;
 use App\User\Domain\ValueObjects\UserPassword;
 
-final class User
+final readonly class User
 {
     public function __construct(
-        private readonly UserId $id,
-        private readonly UserName $name,
-        private readonly UserEmail $email,
-        private readonly UserPassword $password,
-        private readonly UserCreatedAt $createdAt
+        private UserId        $id,
+        private UserName      $name,
+        private UserEmail     $email,
+        private UserPassword  $password,
+        private UserCreatedAt $createdAt
     ) {}
 
     public static function fromPrimitives(array $primitives): self
@@ -25,7 +25,7 @@ final class User
             new UserName($primitives['name']),
             new UserEmail($primitives['email']),
             new UserPassword($primitives['password']),
-            new UserCreatedAt($primitives['createdAt'] ?? null)
+            new UserCreatedAt()
         );
     }
 
